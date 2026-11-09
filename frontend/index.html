@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40' fill='none'><rect width='40' height='40' rx='12' fill='%230284c7'/><path d='M10 8C10 6.9 10.9 6 12 6H24L30 12V32C30 33.1 29.1 34 28 34H12C10.9 34 10 33.1 10 32V8Z' fill='rgba(255,255,255,0.15)' stroke='%2338bdf8' stroke-width='1.5'/><path d='M24 6V11C24 11.6 24.4 12 25 12H30' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round'/><path d='M8 24C12 17 18 19 22 23C26 27 30 24 33 19' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round'/><circle cx='33' cy='19' r='2.5' fill='%2338bdf8'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BillFlow | Smart Billing & Invoice Management Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('billflow_theme');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else if (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
